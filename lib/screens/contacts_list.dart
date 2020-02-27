@@ -13,14 +13,16 @@ class ContactsList extends StatelessWidget {
           Card(
             child: ListTile(
               title: Text(
-                'Giovani',
+                'Alex',
                 style: TextStyle(
                   fontSize: 24.0,
                 ),
               ),
               subtitle: Text(
                 '1000',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(
+                  fontSize: 16.0,
+                ),
               ),
             ),
           )
@@ -30,15 +32,17 @@ class ContactsList extends StatelessWidget {
         onPressed: () {
           Navigator.of(context)
               .push(
-                MaterialPageRoute(
-                  builder: (context) => ContacForm(),
-                ),
-              )
+            MaterialPageRoute(
+              builder: (context) => ContactForm(),
+            ),
+          )
               .then(
                 (newContact) => debugPrint(newContact.toString()),
-              );
+          );
         },
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+        ),
       ),
     );
   }
